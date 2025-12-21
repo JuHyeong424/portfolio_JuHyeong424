@@ -12,7 +12,7 @@
 
     --color-dark-coral: #f4511e;
     --color-coral: #ff6b45;
-    --color-light-coral: #ff8165;
+    --color-light-coral: #ff8a65;
 
     /* 폰트 */
     --font-sans: "Inter", ui-sans-serif, system-ui;
@@ -27,4 +27,38 @@
     }
 
     --animate-float: float 6s ease-in-out infinite;
+}
+
+@layer base {
+    body {
+        @apply bg-navy text-slate font-sans antialiased;
+    }
+
+    h1, h2, h3, h4 {
+        @apply text-white font-bold tracking-tight;
+    }
+}
+
+@layer components {
+    .bg-hero-gradient {
+        background: linear-gradient(135deg, var(--color-coral), #ff6b45, var(--color-light-coral), #fbbf24, #f59e0b);
+    }
+
+    .text-gradient-coral {
+        @apply bg-gradient-to-r from-coral to-light-coral bg-clip-text text-transparent;
+    }
+
+    .portfolio-card {
+        @apply bg-light-navy rounded-xl p-6 shadow-lg transition-all duration-300
+                hover:-translate-y-2 hover:shadow-xl hover:shadow-dark-coral/10;
+    }
+
+    .btn-primary {
+        @apply bg-gradient-to-r from-coral to-light-coral text-white px-6 py-3 rounded-lg
+                font-bold transition-all duration-300 hover:brightness-110 active:scale-95;
+    }
+
+    .glass-effect {
+        @apply bg-navy/70 backdrop-blur-md border border-white/10;
+    }
 }
