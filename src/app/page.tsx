@@ -1,8 +1,8 @@
-import Header from "@/components/Header";
+import Header from "@/sections/Header/Header";
 
 export default function Home() {
   return (
-    <div className="container mx-auto p-4">
+    <div className="">
       <Header />
     </div>
   );
