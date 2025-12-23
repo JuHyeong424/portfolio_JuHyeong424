@@ -45,7 +45,7 @@
     }
 
     .text-gradient-coral {
-        @apply bg-gradient-to-r from-coral to-light-coral bg-clip-text text-transparent;
+        @apply bg-linear-to-r from-coral to-light-coral bg-clip-text text-transparent;
     }
 
     .portfolio-card {
@@ -54,11 +54,36 @@
     }
 
     .btn-primary {
-        @apply bg-gradient-to-r from-coral to-light-coral text-white px-6 py-3 rounded-lg
+        @apply bg-linear-to-r from-coral to-light-coral text-white px-6 py-3 rounded-lg
                 font-bold transition-all duration-300 hover:brightness-110 active:scale-95;
     }
 
     .glass-effect {
         @apply bg-navy/70 backdrop-blur-md border border-white/10;
+    }
+}
+
+@layer Introduction {
+    .hover-glass {
+        position: relative;
+        overflow:hidden;
+    }
+
+    .hover-glass::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: var(--color-coral);
+        opacity: 0;
+        transition: opacity 300ms ease;
+        pointer-events: 0;
+    }
+
+    .hover-glass:hover::after {
+        opacity: 0.2;
+    }
+
+    .hover-glass:hover {
+        @apply shadow-xl shadow-coral/30 transition-all duration-300;
     }
 }
