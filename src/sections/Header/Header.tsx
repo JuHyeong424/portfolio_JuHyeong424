@@ -1,5 +1,9 @@
-import Nav from "./components/Nav";
-import Logo from "./components/Logo";
+"use client";
+
+import Logo from "@/sections/Header/components/Logo";
+import DesktopNav from "@/sections/Header/components/DesktopNav";
+import MobileNav from "@/sections/Header/components/MobileNav";
+import { useState } from "react";
 
 export interface navType {
   id: string;
@@ -15,10 +19,17 @@ const nav = [
 ];
 
 export default function Header() {
+  const [onClick, setOnClick] = useState(false);
+
   return (
-    <header className="flex flex-row justify-between items-center">
+    <header className="w-full flex flex-row justify-between items-center">
       <Logo />
-      <Nav nav={nav} />
+      <div className="hidden md:block">
+        <DesktopNav nav={nav} />
+      </div>
+      <div className="md:hidden">
+        <MobileNav nav={nav} onClick={onClick} setOnClick={setOnClick} />
+      </div>
     </header>
   );
 }
