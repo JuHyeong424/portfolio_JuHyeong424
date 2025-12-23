@@ -3,9 +3,11 @@ import Introduction from "@/sections/Introduction/Introduction";
 
 export default function Home() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col h-screen overflow-hidden">
       <Header />
-      <Introduction />
+      <main className="flex-1 flex flex-col justify-center px-24">
+        <Introduction />
+      </main>
     </div>
   );
 }
