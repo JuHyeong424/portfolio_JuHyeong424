@@ -23,14 +23,31 @@
     
     @keyframes float {
         0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-20px); }
+        50% { transform: translateY(-3px); }
     }
 
-    --animate-float: float 6s ease-in-out infinite;
+    --animate-float: float 1s ease-in-out infinite;
+
+    @keyframes blink {
+        0%, 100% { background-color: rgba(255, 107, 69, 0.15); }
+        50% { background-color: rgba(255, 107, 69, 0.6); }
+    }
+    --animate-very-slow-blink: blink 7s ease-in-out infinite;
+    --animate-slow-blink: blink 5.5s ease-in-out infinite;
+    --animate-fast-blink: blink 2.5s ease-in-out infinite;
+    --animate-normal-blink: blink 4s ease-in-out infinite;
 }
 
 @layer base {
     body {
+        background: linear-gradient(
+        135deg,
+        var(--color-navy),
+        var(--color-light-navy) 40%,
+        var(--color-light-navy) 50%,
+        var(--color-light-navy) 60%,
+        var(--color-navy)
+    );
         @apply bg-navy text-slate font-sans antialiased container mx-auto p-6;
     }
 
@@ -45,7 +62,7 @@
     }
 
     .text-gradient-coral {
-        @apply bg-gradient-to-r from-coral to-light-coral bg-clip-text text-transparent;
+        @apply bg-linear-to-r from-coral to-light-coral bg-clip-text text-transparent;
     }
 
     .portfolio-card {
@@ -54,11 +71,36 @@
     }
 
     .btn-primary {
-        @apply bg-gradient-to-r from-coral to-light-coral text-white px-6 py-3 rounded-lg
+        @apply bg-linear-to-r from-coral to-light-coral text-white px-6 py-3 rounded-lg
                 font-bold transition-all duration-300 hover:brightness-110 active:scale-95;
     }
 
     .glass-effect {
         @apply bg-navy/70 backdrop-blur-md border border-white/10;
+    }
+}
+
+@layer Introduction {
+    .hover-glass {
+        position: relative;
+        overflow:hidden;
+    }
+
+    .hover-glass::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: var(--color-coral);
+        opacity: 0;
+        transition: opacity 300ms ease;
+        pointer-events: 0;
+    }
+
+    .hover-glass:hover::after {
+        opacity: 0.2;
+    }
+
+    .hover-glass:hover {
+        @apply shadow-xl shadow-coral/30 transition-all duration-300;
     }
 }
