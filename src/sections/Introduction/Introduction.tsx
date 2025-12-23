@@ -11,6 +11,13 @@ const URL = {
 export default function Introduction() {
   return (
     <section aria-label="Introduction" className="flex flex-col gap-4">
+      <div className="absolute top-[10vh] inset-0 z-10 pointer-events-none">
+        <span className="absolute top-[14vh] left-[8vw] w-2.5 h-2.5 rounded-full animate-very-slow-blink" />
+        <span className="absolute top-[24vh] right-[12vw] w-2.5 h-2.5 rounded-full animate-slow-blink" />
+        <span className="absolute top-[55vh] right-[18vw] w-2.5 h-2.5 rounded-full animate-fast-blink" />
+        <span className="absolute top-[63vh] left-[20vw] w-2.5 h-2.5 rounded-full animate-normal-blink" />
+    </div>
+
       <div className="relative z-20">
         <p className="text-light-coral font-fira-code lg:mb-6 mb-2">안녕하세요, 저는</p>
         <p className="text-white/95 font-bold xl:text-8xl lg:text-7xl md:text-6xl text-xl">장주형입니다</p>
@@ -70,14 +77,8 @@ export default function Introduction() {
           </a>
         </div>
       </div>
-      <div className="pointer-events-none fixed inset-0 z-10">
-        <span className="absolute top-[20vh] left-[10vw] w-2.5 h-2.5 rounded-full animate-very-slow-blink" />
-        <span className="absolute top-[30vh] right-[12vw] w-2.5 h-2.5 rounded-full animate-slow-blink" />
-        <span className="absolute top-[75vh] right-[20vw] w-2.5 h-2.5 rounded-full animate-fast-blink" />
-        <span className="absolute top-[78vh] left-[20vw] w-2.5 h-2.5 rounded-full animate-normal-blink" />
-      </div>
 
-      <div className="fixed bottom-[5vh] xl:bottom-[15vh] md:bottom-[10vh] left-1/2 -translate-x-1/2 z-50 flex flex-col items-center">
+      <div className="absolute bottom-[5vh] xl:bottom-[15vh] md:bottom-[10vh] left-1/2 -translate-x-1/2 z-50 flex flex-col items-center">
         <span className="text-[6px] xl:text-[10px] md:text-[9px] mb-2 font-fira-code">Scroll Down</span>
         <div className="relative w-2 h-6 md:w-5 md:h-10 border-2 rounded-2xl">
           <span className="absolute top-2 left-1/2 -translate-x-1/2 w-0.5 md:w-1 h-2 md:h-3.5 bg-light-coral rounded-full animate-float" />
