@@ -23,14 +23,31 @@
     
     @keyframes float {
         0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-20px); }
+        50% { transform: translateY(-3px); }
     }
 
-    --animate-float: float 6s ease-in-out infinite;
+    --animate-float: float 1s ease-in-out infinite;
+
+    @keyframes blink {
+        0%, 100% { background-color: rgba(255, 107, 69, 0.15); }
+        50% { background-color: rgba(255, 107, 69, 0.6); }
+    }
+    --animate-very-slow-blink: blink 7s ease-in-out infinite;
+    --animate-slow-blink: blink 5.5s ease-in-out infinite;
+    --animate-fast-blink: blink 2.5s ease-in-out infinite;
+    --animate-normal-blink: blink 4s ease-in-out infinite;
 }
 
 @layer base {
     body {
+        background: linear-gradient(
+        135deg,
+        var(--color-navy),
+        var(--color-light-navy) 40%,
+        var(--color-light-navy) 50%,
+        var(--color-light-navy) 60%,
+        var(--color-navy)
+    );
         @apply bg-navy text-slate font-sans antialiased container mx-auto p-6;
     }
 
