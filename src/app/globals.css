@@ -1,12 +1,5 @@
 @import "tailwindcss";
 
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
 @layer utilities {
     .no-scrollbar::-webkit-scrollbar {
         display: none;
@@ -61,12 +54,12 @@ html, body {
         background: linear-gradient(
         135deg,
         var(--color-navy),
-        var(--color-light-navy) 40%,
-        var(--color-light-navy) 50%,
-        var(--color-light-navy) 60%,
-        var(--color-navy)
+        var(--color-light-navy) 30%,
+        var(--color-lightest-navy) 50%,
+        var(--color-light-navy) 70%,
+        var(--color-navy) 100%
     );
-        @apply bg-navy text-slate font-sans antialiased container mx-auto p-6;
+        @apply bg-navy text-slate font-sans antialiased  w-full min-h-screen m-0 p-0;
     }
 
     h1, h2, h3, h4 {

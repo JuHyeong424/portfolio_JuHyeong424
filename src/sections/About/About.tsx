@@ -1,6 +1,7 @@
 export default function About() {
   return (
-    <main className="bg-navy">
+    <main className="snap-start">
+      <h1>1. About me</h1>
       <p>사용자가 헷갈리지 않는 화면이 좋은 서비스입니다.</p>
       <p>단순히 빠르게 동작하는 것보다 사용자의 의도가 명확히 반영된 인터랙션을 중요하게 생각합니다.</p> 
       <p>UI의 문제를 디자인의 영역에 국한하지 않고 사용 경험(UX)의 문제로 바라보며,</p>
