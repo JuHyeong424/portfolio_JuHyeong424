@@ -16,17 +16,22 @@ const article = [
 
 export default function Box() {
   return (
-    <section className="flex flex-col gap-4">
+    <section className="flex flex-col lg:gap-4 md:gap-3 gap-2">
       {article.map((value) => (
         <article 
           key={value.title}
-          className="flex flex-col bg-light-navy rounded-xl border border-white/10 p-8 gap-2"
-        >
-          <header className="flex flex-row font-extrabold text-light-coral text-xl items-center">
+          className="
+            flex flex-col bg-light-navy rounded-xl border border-white/10 
+            xl:p-8 xl:gap-2 lg:p-4 lg:gap-2 md:p-2 md:gap-2 p-2 gap-1
+          ">
+          <header className="
+            flex flex-row font-extrabold text-light-coral items-center
+            xl:text-2xl lg:text-base md:text-sm md:gap-2 text-xs gap-2
+          ">
             {value.icon}
-            <h2 className="text-light-coral px-2">{value.title}</h2>
+            <h2 className="text-light-coral lg:px-2 lg:text-base md:text-sm text-xs">{value.title}</h2>
           </header>
-          <p>{value.content}</p>
+          <p className="xl:text-base lg:text-sm md:text-xs text-[10px]">{value.content}</p>
       </article>
       ))}
     </section>
