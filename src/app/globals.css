@@ -1,5 +1,16 @@
 @import "tailwindcss";
 
+@layer utilities {
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+}
+
 @theme {
     /* 배경색 */
     --color-navy: #0a192f;
@@ -43,12 +54,12 @@
         background: linear-gradient(
         135deg,
         var(--color-navy),
-        var(--color-light-navy) 40%,
-        var(--color-light-navy) 50%,
-        var(--color-light-navy) 60%,
-        var(--color-navy)
+        var(--color-light-navy) 30%,
+        var(--color-lightest-navy) 50%,
+        var(--color-light-navy) 70%,
+        var(--color-navy) 100%
     );
-        @apply bg-navy text-slate font-sans antialiased container mx-auto p-6;
+        @apply bg-navy text-slate font-sans antialiased  w-full min-h-screen m-0 p-0;
     }
 
     h1, h2, h3, h4 {
