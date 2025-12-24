@@ -4,9 +4,17 @@ interface NavProps {
   nav: navType[];
   onClick: boolean;
   setOnClick: (value: boolean) => void;
+  activeSection: string;
 }
 
-export default function MobileNav({ nav, onClick, setOnClick }: NavProps) {
+export default function MobileNav({ nav, onClick, setOnClick, activeSection }: NavProps) {
+  const handleClick = (target: string) => {
+    document.getElementById(target)?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    })
+  }
+
   return (
     <>
       {!onClick && (
@@ -34,10 +42,19 @@ export default function MobileNav({ nav, onClick, setOnClick }: NavProps) {
             {nav.map((value) => (
               <li
                 key={value.id}
+                onClick={() => handleClick(value.target)}
                 className="cursor-pointer text-sm font-sans hover:text-light-coral"
               >
                 <span className="text-light-coral px-2">{value.id}</span>
-                <span>{value.label}</span>
+                <span className={`
+                    ${activeSection === value.target
+                    ? "text-light-coral"
+                    : "text-white"
+                    }
+                  `}
+                >
+                  {value.label}
+                </span>
               </li>
             ))}
           </ul>

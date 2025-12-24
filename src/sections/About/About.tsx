@@ -11,7 +11,10 @@ const title = {
 
 export default function About() {
   return (
-    <main className="relative h-screen snap-start">
+    <main 
+      id="AboutMe" 
+      className="relative h-screen snap-start"
+    >
       <Title num={title.num} name={title.name} />
 
       <section className="
@@ -19,7 +22,7 @@ export default function About() {
         xl:top-44 xl:gap-8
         lg:top-40 lg:gap-8
         md:top-40 md:gap-8 md:flex-row
-        top-34 gap-2 flex-col
+        top-32 gap-2 flex-col
       ">
         <article className="
           flex flex-col 
