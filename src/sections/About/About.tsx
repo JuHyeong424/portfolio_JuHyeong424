@@ -1,11 +1,28 @@
+import Title from "@/components/common/Title";
+import Article from "@/sections/About/components/Article";
+import Box from "@/sections/About/components/Box";
+import Contact from "@/sections/About/components/Contact";
+import MyImage from "@/sections/About/components/MyImage";
+
+const title = {
+  num: '01',
+  name: 'About Me'
+}
+
 export default function About() {
   return (
-    <main className="snap-start">
-      <h1>1. About me</h1>
-      <p>사용자가 헷갈리지 않는 화면이 좋은 서비스입니다.</p>
-      <p>단순히 빠르게 동작하는 것보다 사용자의 의도가 명확히 반영된 인터랙션을 중요하게 생각합니다.</p> 
-      <p>UI의 문제를 디자인의 영역에 국한하지 않고 사용 경험(UX)의 문제로 바라보며,</p>
-      <p>작은 불편함도 직접 써보고 수정하는 개발을 지향합니다.</p>
+    <main className="relative h-screen snap-start">
+      <Title num={title.num} name={title.name} />
+
+      <section className="absolute top-42 flex flex-row gap-10 w-full">
+        <article className="flex flex-col gap-4 w-[50vw]">
+          <Article />
+          <Box />
+          <Contact />
+        </article>
+
+        <MyImage />
+      </section>
     </main>
   )
 }
