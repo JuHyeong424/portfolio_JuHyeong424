@@ -1,6 +1,12 @@
 import Header from "@/sections/Header/Header";
 import Introduction from "@/sections/Introduction/Introduction";
 import About from "@/sections/About/About";
+import Skills from "@/sections/Skills/Skills";
+
+const sections = [
+  { id: "about", component: <About /> },
+  { id: "skills", component: <Skills /> },
+]
 
 export default function Home() {
   return (
@@ -10,9 +16,16 @@ export default function Home() {
       </div>
       <main className="flex-1 w-full h-screen overflow-y-auto no-scrollbar snap-y snap-mandatory scroll-smooth">
         <Introduction />
-        <section className="bg-navy w-full h-screen flex flex-col justify-center px-10 lg:px-40">
-          <About />
-        </section>
+
+        {sections.map((value) => (
+          <section
+            key={value.id} 
+            id={value.id}
+            className="bg-navy w-full h-screen flex flex-col justify-center px-10 lg:px-40"
+          >
+            {value.component}
+          </section>
+        ))}
       </main>
     </div>
   );

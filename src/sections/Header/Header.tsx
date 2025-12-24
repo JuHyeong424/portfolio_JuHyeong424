@@ -14,7 +14,7 @@ export interface navType {
 
 const nav = [
   { id: "01.", label: "About", target: "AboutMe" },
-  { id: "02.", label: "Skills", target: "Skill" },
+  { id: "02.", label: "Skills", target: "Skills" },
   { id: "03.", label: "Projects", target: "Projects" },
   { id: "04.", label: "Experience", target: "Experience" },
   { id: "05.", label: "Contact", target: "Contact" },
