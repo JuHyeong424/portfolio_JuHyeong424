@@ -1,8 +1,7 @@
 export default function Scroll() {
   return (
     <div className="
-      absolute bottom-[5vh] xl:bottom-[15vh] md:bottom-[10vh] 
-      left-1/2 -translate-x-1/2 z-50 flex flex-col items-center
+      flex flex-col items-center
     ">
         <span className="text-[6px] xl:text-[10px] md:text-[9px] mb-2 font-fira-code"
         >
