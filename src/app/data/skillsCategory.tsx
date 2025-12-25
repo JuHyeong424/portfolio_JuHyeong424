@@ -2,16 +2,13 @@ import { FaCode } from "react-icons/fa";
 import { MdArchitecture } from "react-icons/md";
 import { HiOutlineShieldCheck } from "react-icons/hi";
 import { MdOutlinePalette } from "react-icons/md";
-import { TbBrandNextjs } from "react-icons/tb";
-import { FaReact } from "react-icons/fa";
-import { TbBrandTypescript } from "react-icons/tb";
-import { RiJavascriptLine } from "react-icons/ri";
 import { ICON_URL } from "@/app/data/iconURL";
 
 export const category = [
   {
     id: "foundation",
     name: "Foundation",
+    icon: <FaCode />,
     count: "4 Technologies",
     color: "bg-gradient-to-br from-coral to-orange-500",
     explain: "Core technologies for building modern web applications",
@@ -25,6 +22,7 @@ export const category = [
   {
     id: "data-architecture",
     name: "Data Architecture",
+    icon: <MdArchitecture />,
     count: "4 Technologies",
     color: "bg-gradient-to-br from-amber-500 to-yellow-500",
     explain: "State management and data flow solutions",
@@ -38,6 +36,7 @@ export const category = [
   {
     id: "reliability-qa",
     name: "Reliability & QA",
+    icon: <HiOutlineShieldCheck />,
     count: "5 Technologies",
     color: "bg-gradient-to-br from-emerald-500 to-teal-500",
     explain: "Testing and quality assurance tools",
@@ -52,6 +51,7 @@ export const category = [
   {
     id: "ux-design",
     name: "UX & Design",
+    icon: <MdOutlinePalette />,
     count: "4 Technologies",
     color: "bg-gradient-to-br from-pink-500 to-purple-500",
     explain: "Beautiful and interactive user experiences",

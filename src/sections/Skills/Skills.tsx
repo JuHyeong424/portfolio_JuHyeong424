@@ -27,7 +27,7 @@ export default function Skills() {
         md:top-40 md:gap-8 md:flex-row
         top-32 gap-2 flex-col
       ">
-        <Category setSelectedCategory={setSelectedCategory} />
+        <Category selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
         <Lists selectedCategory={selectedCategory} />
       </section>
     </main>

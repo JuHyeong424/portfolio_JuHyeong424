@@ -115,3 +115,24 @@
         @apply shadow-xl shadow-coral/30 transition-all duration-300;
     }
 }
+
+@layer Skills {
+    .glass {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .glass::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: var(--color-coral);
+        opacity: 0.1;
+        transition: opacity 300ms ease;
+        pointer-events: 0;
+    }
+
+    .glass {
+        @apply border border-coral shadow-lg shadow-coral/30 transition-all duration-300;
+    }
+}
