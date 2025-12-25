@@ -104,7 +104,7 @@
         background-color: var(--color-coral);
         opacity: 0;
         transition: opacity 300ms ease;
-        pointer-events: 0;
+        pointer-events: none;
     }
 
     .hover-glass:hover::after {
@@ -129,10 +129,37 @@
         background-color: var(--color-coral);
         opacity: 0.1;
         transition: opacity 300ms ease;
-        pointer-events: 0;
+        pointer-events: none;
     }
 
     .glass {
+        @apply border border-coral shadow-lg shadow-coral/30 transition-all duration-300;
+    }
+
+    .hover-tech-glass {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hover-tech-glass::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            30deg,
+            var(--color-light-navy),
+            var(--color-light-coral) 100%
+        );
+        opacity: 0;
+        transition: opacity 300ms ease;
+        pointer-events: none;
+    }
+
+    .hover-tech-glass:hover::after {
+        opacity: 0.1;
+    }
+
+    .hover-tech-glass:hover {
         @apply border border-coral shadow-lg shadow-coral/30 transition-all duration-300;
     }
 }

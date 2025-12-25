@@ -11,7 +11,7 @@ export const category = [
     icon: <FaCode />,
     count: "4 Technologies",
     color: "bg-gradient-to-br from-coral to-orange-500",
-    explain: "Core technologies for building modern web applications",
+    explain: "모던 웹 애플리케이션을 구축하기 위한 핵심 프론트엔드 기술 스택",
     technology: [
       { id: "nextjs", name: "Next.js", icon: ICON_URL.nextjs },
       { id: "react", name: "React", icon: ICON_URL.react },
@@ -25,7 +25,7 @@ export const category = [
     icon: <MdArchitecture />,
     count: "4 Technologies",
     color: "bg-gradient-to-br from-amber-500 to-yellow-500",
-    explain: "State management and data flow solutions",
+    explain: "상태 관리와 서버 데이터 흐름을 효율적으로 설계하기 위한 아키텍처 도구",
     technology: [
       { id: "tanstackQuery", name: "TanStack Query", icon: ICON_URL.tanstackQuery },
       { id: "zustand", name: "Zustand", icon: ICON_URL.zustand },
@@ -39,7 +39,7 @@ export const category = [
     icon: <HiOutlineShieldCheck />,
     count: "5 Technologies",
     color: "bg-gradient-to-br from-emerald-500 to-teal-500",
-    explain: "Testing and quality assurance tools",
+    explain: "테스트 자동화와 품질 관리를 통해 안정적인 서비스를 유지하기 위한 도구",
     technology: [
       { id: "playwright", name: "Playwright", icon: ICON_URL.playwright },
       { id: "msw", name: "MSW", icon: ICON_URL.msw },
@@ -54,7 +54,7 @@ export const category = [
     icon: <MdOutlinePalette />,
     count: "4 Technologies",
     color: "bg-gradient-to-br from-pink-500 to-purple-500",
-    explain: "Beautiful and interactive user experiences",
+    explain: "사용자 경험을 향상시키기 위한 인터랙션과 UI 설계 도구",
     technology: [
       { id: "framerMotion", name: "Framer Motion", icon: ICON_URL.framerMotion },
       { id: "tailwindCSS", name: "Tailwind CSS", icon: ICON_URL.tailwindCSS },
