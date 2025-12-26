@@ -2,10 +2,12 @@ import Header from "@/sections/Header/Header";
 import Introduction from "@/sections/Introduction/Introduction";
 import About from "@/sections/About/About";
 import Skills from "@/sections/Skills/Skills";
+import Projects from "@/sections/Projects/Projects";
 
 const sections = [
   { id: "about", component: <About /> },
   { id: "skills", component: <Skills /> },
+  { id: "projects", component: <Projects />}
 ]
 
 export default function Home() {

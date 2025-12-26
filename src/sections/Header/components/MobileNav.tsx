@@ -43,7 +43,7 @@ export default function MobileNav({ nav, onClick, setOnClick, activeSection }: N
               <li
                 key={value.id}
                 onClick={() => handleClick(value.target)}
-                className="cursor-pointer text-sm font-sans hover:text-light-coral"
+                className="cursor-pointer text-sm font-fira-code hover:text-light-coral"
               >
                 <span className="text-light-coral px-2">{value.id}</span>
                 <span className={`

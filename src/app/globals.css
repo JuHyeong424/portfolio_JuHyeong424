@@ -163,3 +163,32 @@
         @apply border border-coral shadow-lg shadow-coral/30 transition-all duration-300;
     }
 }
+
+@layer Projects {
+    .hover-project-glass {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hover-project-glass::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            200deg,
+            var(--color-light-navy),
+            var(--color-light-coral) 100%
+        );
+        opacity: 0;
+        transition: opacity 300ms ease;
+        pointer-events: none;
+    }
+
+    .hover-project-glass:hover::after {
+        opacity: 0.1;
+    }
+
+    .hover-project-glass:hover {
+        @apply border border-light-coral shadow-lg shadow-coral/30 transition-all duration-300;
+    }
+}
