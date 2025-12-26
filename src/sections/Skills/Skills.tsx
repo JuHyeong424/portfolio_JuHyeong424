@@ -23,9 +23,9 @@ export default function Skills() {
       <section className="
         absolute flex w-full
         xl:top-44 xl:gap-8
-        lg:top-40 lg:gap-8
-        md:top-40 md:gap-8 md:flex-row
-        top-32 gap-2 flex-col
+        lg:top-40 lg:gap-6
+        md:top-40 md:gap-6 md:flex-row
+        top-32 gap-4 flex-col
       ">
         <Category selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
         <Lists selectedCategory={selectedCategory} />

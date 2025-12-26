@@ -21,7 +21,7 @@ export default function DesktopNav({ nav, activeSection }: NavProps) {
             key={value.id}
             onClick={() => handleClick(value.target)}
             className={`
-              cursor-pointer text-sm font-sans transition hover:text-light-coral hover:scale-110  
+              cursor-pointer text-sm font-fira-code transition hover:text-light-coral hover:scale-110  
             `}
           >
             <span className="text-light-coral px-2">{value.id}</span>
