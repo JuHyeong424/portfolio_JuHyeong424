@@ -2,10 +2,9 @@
 
 import Title from "@/components/common/Title";
 import { projects } from "@/app/data/projects";
-import { GrFormPrevious } from "react-icons/gr";
-import { GrFormNext } from "react-icons/gr";
 import { useState } from "react";
 import ProjectDetail from "@/sections/Projects/components/ProjectDetail";
+import PagingButton from "@/sections/Projects/components/PagingButton";
 
 const title = {
   num: "03",
@@ -15,18 +14,6 @@ const title = {
 export default function Projects() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const currentProject = projects[currentIndex];
-
-  const handlePrev = () => {
-    setCurrentIndex((prev: number) => {
-      return prev === 0 ? projects.length - 1 : prev - 1;
-    });
-  };
-
-  const handleNext = () => {
-    setCurrentIndex((prev) => {
-      return prev === projects.length - 1 ? 0 : prev + 1;
-    });
-  };
 
   return (
     <main id="Projects" className="relative h-screen snap-start">
@@ -42,29 +29,7 @@ export default function Projects() {
     "
       >
         <ProjectDetail currentIndex={currentIndex} currentProject={currentProject} />
-        
-        <aside>
-          <button
-            aria-label="previous button"
-            onClick={handlePrev}
-            className="
-              absolute -left-24 top-1/2 -translate-y-1/2 cursor-pointer
-              flex items-center justify-center border rounded-full w-12 h-12
-              hover:border-light-coral hover:text-light-coral
-            ">
-            <GrFormPrevious />
-          </button>
-          <button
-            aria-label="next button"
-            onClick={handleNext}
-            className="
-              absolute -right-24 top-1/2 -translate-y-1/2 cursor-pointer
-              flex items-center justify-center border rounded-full w-12 h-12
-              hover:border-light-coral hover:text-light-coral
-            ">
-            <GrFormNext />
-          </button>
-        </aside>
+        <PagingButton total={projects.length} setCurrentIndex={setCurrentIndex} />
       </section>
     </main>
   );
