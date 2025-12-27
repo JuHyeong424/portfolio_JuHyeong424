@@ -24,7 +24,7 @@ export default function PagingButton({ setDirection, total, setCurrentIndex }: P
   };
 
   return (
-    <aside className="absolute inset-0">
+    <aside className="absoluteW">
       <button
         aria-label="previous button"
         onClick={handlePrev}
