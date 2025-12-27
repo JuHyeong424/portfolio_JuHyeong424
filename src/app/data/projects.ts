@@ -1,3 +1,14 @@
+export interface Projects {
+  id: string;
+  name: string;
+  day: string;
+  type: string;
+  explain: string;
+  function: string[];
+  tech: string[];
+  url: string;
+}
+
 export const projects = [
   {
     id: "반려견 산책 경로 추천 및 기록 서비스",
