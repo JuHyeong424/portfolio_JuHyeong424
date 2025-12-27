@@ -12,7 +12,8 @@ export default function ProjectDetail({ currentIndex, currentProject }: ProjectD
     <section
       className="
         border rounded-xl border-white/10 bg-navy
-        flex flex-row px-8 py-10 gap-1 hover-project-glass
+        flex md:flex-row flex-col gap-1 hover-project-glass
+        lg:px-8 xl:py-10 lg:py-6 md:px-4 md:py-4 px-3 py-3
     ">
       <ProjectRight currentProject={currentProject} />
       <ProjectLeft currentIndex={currentIndex} currentProject={currentProject} />

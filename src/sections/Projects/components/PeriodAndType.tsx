@@ -8,7 +8,11 @@ interface PeriodAndTypeProps {
 
 export default function PeriodAndType({ currentProject }: PeriodAndTypeProps) {
   return (
-    <div className="flex flex-row font-fira-code pb-2 text-sm text-white/60 gap-4">
+    <div className="
+      flex flex-row font-fira-code text-white/60 gap-4
+      xl:text-sm lg:text-xs md:text-[12px] text-[8px]
+      lg:pb-2 md:pb-1 pb-1
+    ">
       <div className="flex flex-row items-center">
         <CiCalendar className="mr-2" />
         <span>{currentProject.day}</span>

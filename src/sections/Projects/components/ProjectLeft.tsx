@@ -9,8 +9,11 @@ interface ProjectLeftProps {
 
 export default function ProjectLeft({ currentIndex, currentProject }: ProjectLeftProps) {
   return (
-    <div className="flex flex-col w-[20vw] gap-2">
-      <h3 className="text-base text-light-coral font-fira-code font-bold my-2">
+    <div className="flex flex-col md:w-[20vw] gap-2">
+      <h3 className="
+        hidden md:flex text-light-coral font-fira-code font-bold md:my-2 mb-1
+        xl:text-base lg:text-sm md:text-xs text-[10px]
+      ">
         Tech Stack
       </h3>
       <TechStack currentProject={currentProject} />

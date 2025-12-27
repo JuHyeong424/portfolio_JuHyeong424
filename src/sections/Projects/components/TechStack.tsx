@@ -6,12 +6,17 @@ interface TechStackProps {
 
 export default function TechStack({ currentProject }: TechStackProps) {
   return (
-    <div className="flex flex-wrap gap-2 text-xs font-fira-code">
+    <div className="
+      hidden md:flex flex-wrap md:gap-2 gap-1
+      lg:text-xs md:text-[10px] text-[8px] font-fira-code
+    ">
       {currentProject.tech.map((tech, index) => (
         <span
           key={index}
-          className="border border-white/20 rounded-md px-2 py-1 hover:border-light-coral  hover:text-light-coral"
-        >
+          className="
+            border border-white/20 rounded-md hover:border-light-coral  hover:text-light-coral
+            md:px-2 md:py-1 px-1 py-1
+          ">
           {tech}
         </span>
       ))}
