@@ -12,7 +12,7 @@ export default function KeyHighlights({ currentProject }: KeyHighlightsProps) {
         <li key={index} className="
           flex flex-row items-center 
           xl:text-sm lg:text-xs md:text-[14px] text-[10px] 
-          lg:py-2 md:py-1
+          lg:py-2 md:py-1 
         ">
           <span className="font-bold md:text-xl text-xs">
             <IoChevronForward className="text-light-coral" />
