@@ -3,7 +3,7 @@
 import Title from "@/components/common/Title";
 import ExperienceSummary from "@/sections/Experience/components/ExperienceSummary";
 import { useState } from "react";
-import ExperienceDetail from "./components/ExperienceDetail";
+import ExperienceDetail from "@/sections/Experience/components/ExperienceDetail";
 
 const title = {
   num: "04",
