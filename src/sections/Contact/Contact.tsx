@@ -19,8 +19,8 @@ export default function Contact() {
         top-32 gap-4
       ">
         <div className="flex flex-col gap-4 justify-center items-center">
-          <h2 className="text-2xl">끝까지 읽어주셔서 감사합니다.</h2>
-          <p className="text-base">부족하지만 언제나 성장할 수 있는 사람이 되겠습니다.</p>
+          <h2 className="md:text-2xl text-base">끝까지 읽어주셔서 감사합니다.</h2>
+          <p className="md:text-base text-sm">부족하지만 언제나 성장할 수 있는 사람이 되겠습니다.</p>
         </div>
         <ContactLink />
       </section>
