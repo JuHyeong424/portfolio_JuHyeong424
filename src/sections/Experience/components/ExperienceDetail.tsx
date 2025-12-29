@@ -10,7 +10,7 @@ export default function ExperienceDetail({ setModal }: ExperienceDetailProps) {
     <div className="flex flex-col gap-6">
       <IoMdClose 
         onClick={() => setModal(false)}
-        className="self-end cursor-pointer hover:text-light-coral text-xl"
+        className="self-end cursor-pointer hover:text-light-coral md:text-xl text-base"
       />
       <ExperienceList />
     </div>

@@ -28,8 +28,10 @@ export default function Experience() {
       >
         <button 
           onClick={() => setModal((prev) => !prev)}
-          className="inline-flex self-end w-fit cursor-pointer  hover:text-light-coral"
-        >
+          className="
+            inline-flex self-end w-fit cursor-pointer  hover:text-light-coral
+            xl:text-base lg:text-sm md:text-xs text-[10px]
+        ">
           자세히 보기
         </button>
         <ExperienceSummary />
