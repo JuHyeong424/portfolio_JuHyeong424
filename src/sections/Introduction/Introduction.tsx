@@ -5,7 +5,7 @@ import Link from "@/sections/Introduction/components/Link";
 
 export default function Introduction() {
   return (
-    <section aria-label="Introduction" className="snap-start relative h-screen w-full flex flex-col gap-4">
+    <section id="Introduction" aria-label="Introduction" className="snap-start relative h-screen w-full flex flex-col gap-4">
       <div className="absolute inset-0 z-0">
         <Dot />
       </div>
