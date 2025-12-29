@@ -4,12 +4,14 @@ import About from "@/sections/About/About";
 import Skills from "@/sections/Skills/Skills";
 import Projects from "@/sections/Projects/Projects";
 import Experience from "@/sections/Experience/Experience";
+import Contact from "@/sections/Contact/Contact";
 
 const sections = [
   { id: "about", component: <About /> },
   { id: "skills", component: <Skills /> },
   { id: "projects", component: <Projects />},
   { id: "experience", component: <Experience />},
+  { id: "contact", component: <Contact />},
 ]
 
 export default function Home() {
